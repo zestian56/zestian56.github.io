@@ -1,0 +1,290 @@
+@keyframes fill-bar {
+    0% {
+        width: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+html{
+    font-size: 1.2vw;
+}
+body {
+    margin: 0;
+    width: 100%;
+    position: aboslute;
+    background: black;
+    color: #FFF7DB;
+    background-image: url("assets/background4.png");
+    font-family: 'Roboto';
+    font-size: 22px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    max-width:1980px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex: 0 0 100%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1rem;
+    background: #E3524B;
+}
+
+.header-img {
+    flex: 1 0 19rem;
+    background: rgb(226, 95, 88);
+    padding: 2%;
+}
+
+.header-img img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-content {
+    font-size: 1.1rem;
+    flex: 1 1 calc(100% - 19rem);
+    padding: 2% 3%;
+}
+
+.header-content h3 {
+    margin: 0 0 4% 0;
+}
+
+.header-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+}
+
+.header-info {
+    border-top: solid #FFF7DB 0.5px;
+    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: none;
+    color: rgb(255, 250, 231);
+    justify-content: space-between;
+    margin-top: 1.5%;
+    padding-top: 2%;
+}
+
+.header-info-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.item-title-light {
+    background: #40383E;
+}
+
+.item-content-light {
+    background-color: #46505C;
+}
+
+.item-title-dark {
+    background: #383137;
+}
+
+.item-content-dark {
+    background-color: #404854;
+}
+
+.item-container {
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+
+.item-title {
+    flex: 1 0 19rem;
+    padding: 2% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.item-content {
+    flex: 1 0 calc(100% - 19rem);
+    padding: 2% 3%;
+    text-align: justify;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+.item-content-info{
+    padding: 2% 3% 3% 3%;
+}
+.exp {
+    display: flex;
+    flex: 0 1 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.exp-head {
+    flex: 0 1 20rem;
+    padding: 0 0 2%;
+}
+
+.exp-content {
+    flex: 1 1 20rem;
+    padding:0 0 1% 0;
+}
+
+.item {
+    flex: 0 1 18rem;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.item-number {
+    color: rgb(226, 95, 88);
+    font-weight: bolder;
+    flex: 0 0 2rem;
+}
+
+.item-skill {
+    flex: 0 0 calc(100% - 2rem);
+    display: flex;
+    padding: 0 5% 0 0;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.item-skill h3,
+.item-skillr p {
+    margin: 0 0 5px 0;
+}
+
+.skill-bar {
+    background: black;
+    height: 0.3rem;
+    flex: 0 0 100%;
+}
+
+.skill-bar .fill {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: fill-bar 1s;
+    background: #E3524B;
+}
+
+.skill-n {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.soft-gray {
+    color: rgb(216, 216, 230);
+}
+
+.soft-red {
+    color: rgb(226, 95, 88);
+}
+
+.js {
+    width: 85%;
+}
+
+.sass {
+    width: 70%;
+}
+
+.html {
+    width: 80%
+}
+
+.angular {
+    width: 95%
+}
+
+.electron,
+.ionic,
+.firebase {
+    width: 50%;
+}
+
+.mongo {
+    width: 70%;
+}
+
+.react-n {
+    width: 20%;
+}
+
+.node {
+    width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size:initial;
+    }
+    .item-title {
+        padding: 2% 3%;
+        align-items: flex-start;
+    }
+    
+    .header-img {
+        flex: 0 0 13rem;
+        background: none;
+        padding: 2%;
+    }
+    .item-title {
+        flex: 0 0 100%;
+    }
+    .header-content {
+        flex: 0 0 100%;
+    }
+    .header-content h1,
+    .header-content h3 {
+        text-align: center;
+    }
+    .item {
+        flex-grow: 1;
+    }
+    .header-icons {
+        width: auto;
+        justify-content: space-around;
+        flex: 1 1 100%;
+    }
+    .header-info {
+        height: 6rem;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 919px) {
+    .exp-content {
+        padding: 3% 0 2rem 0;
+    }
+}
