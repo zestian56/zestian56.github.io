@@ -18,7 +18,7 @@ body {
     position: aboslute;
     background: black;
     background-image: url("assets/background4.png");
-    font-family: 'Roboto';
+    font-family: 'Roboto', 'Open Sans';
     font-size: 22px;
 }
 
@@ -29,7 +29,18 @@ h4 {
     margin: 0;
 }
 
-.text-soft-white {
+input,
+textarea {
+    padding: 0 1%;
+    border-radius: 4px;
+    border: none;
+}
+
+textarea {
+    padding: 2%;
+}
+
+.text-soft-white{
     color: #FFF7DB;
 }
 
@@ -80,12 +91,17 @@ h4 {
 }
 
 .modal-content {
+    
     flex: 0 1 35rem;
     display: flex;
+    position:relative;
+    top:-1000px;
     border-radius: 10px 10px 0 0;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    transition: top 400ms ease-out;
+    
 }
 
 .modal-content-title {
@@ -110,6 +126,11 @@ h4 {
     width: 100%;
     flex: 1 1 13rem;
     margin-top: 3.5%;
+    resize:none;
+}
+.modal-content-content .big-text::placeholder { 
+    font-family: Roboto,sans-serif;
+    font-size:0.8rem;
 }
 
 .modal-content-content button {
@@ -125,17 +146,10 @@ h4 {
     color: #ecf0f1;
     transition: all .2s;
 }
+
 .modal-content-content button:hover {
-    background-color:#E3524B;
-    cursor:pointer;
-}
-input , textarea {
-    padding: 0 1%;
-    border-radius: 4px;
-    border: none;
-}
-textarea {
-    padding:2%;
+    background-color: #E3524B;
+    cursor: pointer;
 }
 
 .form-item {
@@ -149,7 +163,7 @@ textarea {
 }
 
 .form-item label {
-    flex: 0 0 6rem;
+    flex: 0 0 7rem;
 }
 
 .form-item input {
@@ -176,20 +190,23 @@ textarea {
 }
 
 .header-img {
-    flex: 1 0 19rem;
+    flex: 1 0 15%;
     padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .header-img img {
     border-radius: 50%;
-    width: 100%;
-    height: 100%;
+    width: 15rem;
+    height: 15rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header-content {
     font-size: 1.1rem;
-    flex: 1 1 calc(100% - 19rem);
+    flex: 1 1 50%;
     padding: 2% 3%;
 }
 
@@ -202,13 +219,16 @@ textarea {
     justify-content: space-between;
     width: 12rem;
 }
-.header-icons img{
-    height:24px;
-    width:24px;
+
+.header-icons img {
+    height: 24px;
+    width: 24px;
 }
+
 .header-icons img:hover {
-    cursor:pointer;
+    cursor: pointer;
 }
+
 .header-info {
     border-top: solid #FFF7DB 0.5px;
     font-size: 0.8rem;
@@ -235,7 +255,7 @@ textarea {
 }
 
 .item-title {
-    flex: 1 0 19rem;
+    flex: 1 0 15%;
     padding: 2% 2%;
     display: flex;
     flex-direction: column;
@@ -243,7 +263,7 @@ textarea {
 }
 
 .item-content {
-    flex: 1 0 calc(100% - 19rem);
+    flex: 1 0 50%;
     padding: 2% 3%;
     text-align: justify;
     flex-wrap: wrap;
@@ -267,26 +287,38 @@ textarea {
     flex: 0 1 20rem;
     padding: 0 0 2%;
 }
-
+.exp-head-date{
+    font-size:0.8rem;
+    font-weight: 500;
+}
+.exp-head-title{
+    font-size:1.3rem; 
+    font-weight: 600;
+}
+.exp-head-company{
+    font-size:0.9rem;
+     font-weight: 550;
+}
+.exp-head-location{
+    font-size:0.8rem; 
+    font-weight: 450;
+}
 .exp-content {
     flex: 1 1 20rem;
     padding: 0 0 1% 0;
 }
 
 .item {
-    flex: 0 1 18rem;
+    flex: 1 18rem;
     display: flex;
     margin-bottom: 2%;
+    padding-right:2%;
 }
 
-.item-number {
-    color: rgb(226, 95, 88);
-    font-weight: bolder;
-    flex: 0 0 2rem;
-}
+
 
 .item-skill {
-    flex: 0 0 calc(100% - 2rem);
+    flex: 1;
     display: flex;
     padding: 0 5% 0 0;
     flex-wrap: wrap;
@@ -364,6 +396,7 @@ textarea {
     .header-img {
         flex: 0 0 13rem;
         background: none;
+        justify-content: center;
         padding: 2%;
     }
     .item-title {
@@ -395,5 +428,8 @@ textarea {
 @media only screen and (max-width: 919px) {
     .exp-content {
         padding: 3% 0 2rem 0;
+    }
+    .item{
+        padding:0;
     }
 }
