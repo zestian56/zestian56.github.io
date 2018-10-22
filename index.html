@@ -5,12 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Sebastian Botero</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="styles.css"
+        <link rel="stylesheet" type="text/css" media="screen"
+            href="styles/styles.css"
             />
         <link href='https://fonts.googleapis.com/css?family=Roboto'
             rel='stylesheet'>
         <link rel="icon" type="image/png" sizes="32x32"
             href="assets/cafe.png">
+        <script type="text/javascript"
+            src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+        <script type="text/javascript">
+                (function(){
+                   emailjs.init("user_mn3Hk0Z8HLMP84j7tXBgl");
+                })();
+             </script>
     </head>
     <body class="text-soft-white">
         <div class="container">
@@ -18,21 +26,24 @@
                 <div id="modal-content" class="modal-content
                     item-content-light">
                     <div class="modal-content-title bckg-red">Contactame</div>
-                    <form class="modal-content-content">
+                    <form class="modal-content-content" id="mail-form">
+                        <input type="hidden" name="contact_number">
                         <div class="form-item">
                             <label for="nombre"> Nombre</label>
-                            <input required name="nombre" id="txtNombre"
+                            <input required name="user_name" id="txtNombre"
+                                placeholder="foo"
                                 type="text">
                         </div>
                         <div class="form-item">
                             <label for="correo"> Correo</label>
-                            <input required name="correo" id="txtCorreo"
+                            <input required name="user_email" id="txtCorreo"
+                                placeholder="foo@bar.com"
                                 type="email">
                         </div>
-                        <textarea class="big-text" name="mensaje" required
+                        <textarea class="big-text" name="text" required
                             id="txtMensaje" cols="30" rows="10"
                             placeholder="Escribe tú mensaje..."></textarea>
-                        <button onclick="sendMessage()" class="bckg-soft-red">Enviar</button>
+                        <button type="submit" class="bckg-soft-red">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -46,8 +57,9 @@
                         <h1>Sebastian Botero</h1>
                         <h3 class="text-soft-gray">Ingeniero Multimedia </h3>
                         <div class="header-icons">
-                            <a href="https://www.facebook.com/sebas565">
-                                <img src="assets/facebook.png" alt="facebook">
+                            <a
+                                href="https://www.linkedin.com/in/sebastian-botero-08a292171/">
+                                <img src="assets/linkedin.png" alt="linkedin">
                             </a>
                             <a href="https://www.instagram.com/sebas565/">
                                 <img src="assets/instagram.png" alt="instagram">
@@ -64,8 +76,8 @@
                                 Colombia, Cali
                             </div>
                             <div class="header-info-item">
-                                <b>Dirección</b>
-                                Cll. 13c #72-93
+                                <b>Nacionalidad</b>
+                                Colombiano
                             </div>
                             <div class="header-info-item">
                                 <b>Celular</b>
@@ -100,11 +112,10 @@
                         configuración y monitoreo.
                         <br>
                         <br> Tengo habilidad y disposición para aprender nuevas
-                        métodologias y procesos así como tener un conocimiento
+                        metodologías y procesos, así como tener un conocimiento
                         avanzado
                         en el manejo y gestión de proyectos en el área de las TI
-                        (
-                        tecnologías de la información).
+                        (tecnologías de la información).
                     </div>
                 </div>
             </div>
@@ -187,7 +198,7 @@
                                     Auxiliar de Desarrollo Web</div>
                                 <div class="exp-head-company">Clinica Nueva
                                     Sonrisa</div>
-                                <div class="exp-head-location" style="">
+                                <div class="exp-head-location">
                                     Cali, Colombia</div>
                             </div>
                             <div class="exp-content">
@@ -285,30 +296,33 @@
                                     Aplicación de escritorio para la
                                     configuración
                                     simultanea de dispositivos de
-                                    comunicación inalambrica Xbee.
+                                    comunicación inálambrica Xbee.
                                 </p>
                                 <div class="item-project-icons">
-                                    <img src="assets/electron.png" alt="">
-                                    <img src="assets/nodejs.png" alt="">
-                                    <img src="assets/angular.svg" alt="">
+                                    <img src="assets/electron.png"
+                                        alt="electron">
+                                    <img src="assets/nodejs.png" alt="nodejs">
+                                    <img src="assets/angular.svg" alt="angular">
                                 </div>
                             </div>
                         </div>
                         <div class="item-project">
-                            <img src="assets/sim1.jpg" alt="Proyecto Xbee"
+                            <img src="assets/sim1.jpg" alt="Proyecto SIM"
                                 class="background-image">
                             <div class="item-project-content">
                                 <h3>SIM</h3>
                                 <hr class="item-project-head-decoration">
                                 <p>
                                     Aplicación web y de escritorio para el
-                                    monitoreo y configuración de los sistemas de
-                                    tráfico inteligentes inalambricos ECO-COVA.
+                                    monitoreo y configuración de los sistemas
+                                    inteligentes de
+                                    tráfico inálambricos ECO-COVA.
                                 </p>
                                 <div class="item-project-icons">
-                                    <img src="assets/electron.png" alt="">
-                                    <img src="assets/nodejs.png" alt="">
-                                    <img src="assets/react.svg" alt="">
+                                    <img src="assets/electron.png"
+                                        alt="electron">
+                                    <img src="assets/nodejs.png" alt="nodejs">
+                                    <img src="assets/react.svg" alt="react">
                                 </div>
                             </div>
                         </div>
@@ -317,8 +331,8 @@
             </div>
 
         </div>
-
-        <script src="index.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="scripts/email.js"></script>
     </body>
 
 </html>
