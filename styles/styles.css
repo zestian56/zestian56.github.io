@@ -383,7 +383,7 @@ textarea {
 .item-project {
     flex: 0 1 20rem;
     max-width: 400px;
-    height: 13rem;
+    height: 12rem;
     background: black;
     border-radius: 1rem;
     display: flex;
